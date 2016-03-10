@@ -1,4 +1,4 @@
-//Molib_Tieba_Service:call
+//Service:call
 $strServiceName = '%service_name%';
 $strMethod = '%method_name%';
 

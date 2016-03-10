@@ -1,6 +1,5 @@
 <?php
 /*==================================
-*   Copyright (C) 2014 Baidu.com, Inc. All rights reserved.
 *   
 *   filename	:	%filename%
 *   author		:	%author%
