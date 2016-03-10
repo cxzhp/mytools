@@ -1,0 +1,32 @@
+//@url : /c/u/game/getgamecategory
+//@description : 获取游戏分类一级页(一次返回所有分类，没有分页，目前看最多10个分类) cmd:303104
+//@notice :  
+//@author: cxzhp
+
+struct Error
+{
+    int32_t     errno;	        //错误号
+    string      errmsg;	        //错误信息
+    string      usermsg;        //给用户提示信息
+};
+
+
+struct Req{
+	int32_t recommend_platform; //android=2,ios官方版=1，越狱版=3
+};
+
+struct GameCategory{
+	uint32_t	id;				//分类id
+	string		name;			//游戏名称
+	string		icon_url;		//icon图片地址
+	GameList	game_list[];	//游戏名称列表
+};
+struct ResData
+{
+	GameCategory category_list[];//游戏分类
+};
+struct Res
+{
+    Error		error;	// 错误信息，详见贴吧统一错误号文件
+    ResData		data;	// 返回数据
+};
